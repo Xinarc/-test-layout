@@ -10,7 +10,7 @@ body {
 .header {
   background-image: url(../img/images/header-slider.jpg);
   background-repeat: no-repeat;
-  background-color: #f4f5f8;
+  background-color: #241d1a;
 }
 
 .header_top {
@@ -23,14 +23,16 @@ body {
   padding: 40px 375px 0 375px;
 }
 
-.header_top ul {
+.header_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 22px 0 0 0;
+  padding: 0;
 }
 
-.header_top a {
+.header_list a {
   text-decoration: none;
   margin: 0 0 0 30px;
   color: #fff;
@@ -39,16 +41,62 @@ body {
   font-weight: 300;
 }
 
-.header_top a:hover, .header_top a:active {
+.header_list a:hover, .header_list a:active {
   color: #c7b299;
 }
 
-.header_cart {
-  margin: 15px 0 0 33px;
+.header_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
 }
 
-.header_search {
+.header_logo:hover {
+  color: #998675;
+}
+
+.header_svg {
+  fill: currentColor;
+}
+
+.header_name {
+  font-family: Raleway;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -1.36px;
+  margin: 15px 0 0 2px;
+}
+
+.header_cart {
   margin: 15px 0 0 0;
+  fill: #fff;
+}
+
+.header_cart:hover, .header_cart:active {
+  fill: #c7b299;
+}
+
+.header_input {
+  width: 24px;
+  height: 24px;
+  outline: none;
+  background-image: url(/img/icons/icon-search.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  margin: 15px 0 0 0;
+  position: absolute;
+}
+
+.header_input:focus {
+  width: 260px;
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+  background-position: right;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .header_slider {
@@ -120,31 +168,77 @@ body {
   color: #fff;
 }
 
-.header_slider-btn:hover {
+.header_slider-btn_left {
+  margin: 60px 0 0 0;
+}
+
+.header_slider-btn_left:after {
+  content: "";
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  border-bottom: 3px solid #d3c1ad;
+  border-left: 3px solid #d3c1ad;
   opacity: 0.5;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header_slider-btn_left:hover:after {
+  border-bottom: 3px solid #d3c1ad;
+  border-left: 3px solid #d3c1ad;
+  opacity: 1;
+}
+
+.header_slider-btn_right {
+  margin: 60px 0 0 0;
+}
+
+.header_slider-btn_right:after {
+  content: "";
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  border-top: 3px solid #d3c1ad;
+  border-right: 3px solid #d3c1ad;
+  opacity: 0.5;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header_slider-btn_right:hover:after {
+  border-top: 3px solid #d3c1ad;
+  border-right: 3px solid #d3c1ad;
+  opacity: 1;
 }
 
 .header_pagination {
   padding: 329px 0 13px 0;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header_circle {
+  display: block;
   width: 11px;
   height: 11px;
-  display: inline-block;
-  background-color: #fff;
+  background-color: #d3c1ad;
   border-radius: 50%;
+  border: 2px solid transparent;
   margin-right: 10px;
   opacity: 0.5;
 }
 
 .header_circle-active, .header_circle:hover {
-  width: 15px;
-  height: 15px;
+  background-color: transparent;
   border: 2px solid #d3c1ad;
-  margin-bottom: -3px;
-  background: inherit;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
 }
 
 .services {
@@ -157,13 +251,38 @@ body {
   padding: 80px 376px 80px 378px;
 }
 
-.services figure {
-  margin: 0 34px 0 0;
+.services_itm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.services img {
-  margin-bottom: 29px;
+.services_itm:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #f1eee9;
+}
+
+.services_itm:hover .services_icon {
+  fill: #c7b299;
+}
+
+.services_itm:hover .services_title {
+  color: #c7b299;
+}
+
+.services_itm:hover:after {
+  background-color: #c7b299;
 }
 
 .services span {
@@ -171,6 +290,7 @@ body {
   font-family: Raleway;
   font-size: 22px;
   font-weight: 400;
+  margin: 29px 0 19px 0;
 }
 
 .services p {
@@ -179,7 +299,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-  margin: 19px 0 0 0;
   max-width: 267px;
+  margin: 0 0 30px 0;
 }
 /*# sourceMappingURL=style.css.map */
