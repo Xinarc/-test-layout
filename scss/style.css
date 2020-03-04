@@ -2,15 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-body {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
 .header {
   background-image: url(../img/images/header-slider.jpg);
   background-repeat: no-repeat;
   background-color: #f4f5f8;
+  background-size: 100%;
+  background-position: center;
 }
 
 .header_top {
@@ -181,5 +178,18 @@ body {
   line-height: 24px;
   margin: 19px 0 0 0;
   max-width: 267px;
+  border-bottom: 3px solid green;
+  border-width: 3px 70px;
+}
+
+.services p:after {
+  content: '-';
+  width: 70px;
+  height: 3px;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,7 @@
+//миксины
+@mixin large-text($color, $family, $size, $weight) {
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
