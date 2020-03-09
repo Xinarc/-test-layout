@@ -281,12 +281,12 @@ body {
   background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
   display: flex;
   justify-content: space-between;
-  & h2 {
+  &_text {
     @include large-text($color-white, Raleway, 28px, 400);
     margin: 0 0 8px 0;
-    & span {
-      color: #c7b299;
-    }
+  }
+  &_text-color {
+    color: #c7b299;
   }
   & p {
     @include large-text(#615855, Montserrat, 18px, 300);
@@ -304,6 +304,145 @@ body {
     &:hover {
       color: #998675;
       background-color: $color-white;
+    }
+    &:active {
+      color: $color-white;
+      background-color: #998675;
+    }
+  }
+}
+.our {
+  padding: 85px 375px;
+  text-align: center;
+  &_title {
+    @include large-text(#555555, Raleway, 30px, 700);
+  }
+  &_text {
+    @include large-text(#8c8c8c, Montserrat, 16px, 300);
+    line-height: 28px;
+    max-width: 757px;
+    margin: 24px auto 40px auto;
+  }
+  &_btn {
+    & button {
+      border-radius: 3px;
+      border: 1px solid #ebebeb;
+      background-color: transparent;
+      @include large-text(#8c8c8c, Montserrat, 14px, 300);
+      line-height: 32px;
+      padding: 0 25px;
+      margin: 0 10px 40px 0;
+      outline: none;
+      &:hover,
+      &:first-child {
+        background-color: #998675;
+        color: $color-white;
+      }
+      &:active {
+        background-color: $color-white;
+        color: #998675;
+      }
+    }
+  }
+  &_itm-wrp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_itm {
+    position: relative;
+    margin: 0 0 30px 30px;
+    font-size: 0;
+    &:first-child,
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+  }
+  &_text-wrp {
+    width: 100%;
+    background-color: #fbfaf8;
+    position: relative;
+  }
+  &_text-wrp:before {
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    position: absolute;
+    top: -20px;
+    left: 19px;
+  }
+  &_itm-title {
+    display: block;
+    text-align: center;
+    padding: 30px 0 14px 28px;
+    @include large-text(#c7b299, Raleway, 20px, 500);
+    text-align: left;
+  }
+  &_itm-text {
+    display: block;
+    text-align: center;
+    padding: 0 0 27px 30px;
+    @include large-text(#d1d1d1, Montserrat, 14px, 300);
+    line-height: 20px;
+    text-align: left;
+  }
+  &_btn-link,
+  &_btn-search {
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    display: none;
+  }
+  &_btn-link {
+    background-color: #c7b299;
+    mask-image: url(../img/icons/link.svg);
+    top: 106px;
+    left: 145px;
+  }
+  &_btn-search {
+    background-color: #c7b299;
+    mask-image: url(../img/icons/lupa.svg);
+    top: 106px;
+    right: 145px;
+  }
+  &_itm:hover .our_btn-search,
+  &_itm:hover .our_btn-link {
+    display: block;
+  }
+  &:hover .our_btn-link:hover,
+  &:hover .our_btn-search:hover {
+    background-color: $color-white;
+  }
+  &_itm:hover .our_photo {
+    filter: brightness(20%);
+  }
+  &_itm:hover .our_text-wrp {
+    background-color: #362f2d;
+    color: $color-white;
+  }
+  &_itm:hover .our_text-wrp:before {
+    border-bottom: 10px solid #362f2d;
+  }
+  &_btn-bottom {
+      display: inline-block;
+    box-shadow: inset 0 -3px 0 #736357;
+    border-radius: 3px;
+    background-color: #998675;
+    @include large-text($color-white, Raleway, 14px, 800);
+    line-height: 23px;
+    text-transform: uppercase;
+    padding: 20px 45px;
+    text-decoration: none;
+    margin-top: 10px;
+    &:hover {
+      color: #998675;
+      background-color: $color-white;
+      border: 1px solid #998675;
+      box-sizing: border-box;
     }
     &:active {
       color: $color-white;
