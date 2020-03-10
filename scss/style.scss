@@ -483,3 +483,39 @@ body {
     filter: brightness(50%);
   }
 }
+.exellent {
+  background-color: #fbfaf8;
+  display: flex;
+  padding: 79px 0 0 423px;
+  &_body {
+    margin: 116px 0 0 31px;
+    & span {
+      @include large-text(#555555, Raleway, 30px, 700);
+    }
+    & p {
+      @include large-text(#8c8c8c, Montserrat, 16px, 300);
+      line-height: 28px;
+      margin: 40px 0 0 2px;
+      max-width: 657px;
+    }
+    & ul {
+      margin: 40px 0 0 50px;
+    }
+    & li {
+      @include large-text(#8c8c8c, Montserrat, 16px, 300);
+      line-height: 32px;
+      list-style-type: none;
+      padding-left: 29px;
+      position: relative;
+    }
+    & li:before {
+      content: "";
+      background: url(../img/icons/list.png) no-repeat left top;
+      height: 21px;
+      width: 21px;
+      position: absolute;
+      left: -29px;
+      top: 7px;
+    }
+  }
+}
