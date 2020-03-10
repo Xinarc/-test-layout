@@ -428,7 +428,7 @@ body {
     border-bottom: 10px solid #362f2d;
   }
   &_btn-bottom {
-      display: inline-block;
+    display: inline-block;
     box-shadow: inset 0 -3px 0 #736357;
     border-radius: 3px;
     background-color: #998675;
@@ -441,12 +441,45 @@ body {
     &:hover {
       color: #998675;
       background-color: $color-white;
-      border: 1px solid #998675;
-      box-sizing: border-box;
     }
     &:active {
       color: $color-white;
       background-color: #998675;
     }
+  }
+}
+.video {
+  position: relative;
+  &_body {
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    & span {
+      @include large-text($color-white, Raleway, 30px, 500);
+      margin: 44px 0 29px 0;
+    }
+    & p {
+      @include large-text($color-white, Montserrat, 16px, 300);
+      line-height: 28px;
+      max-width: 552px;
+      margin: 0 0 40px 0;
+    }
+    & time {
+      @include large-text(#c7b299, Montserrat, 14px, 400);
+      line-height: 24px;
+    }
+  }
+  & video {
+    outline: none;
+    width: 100%;
+    min-height: 100%;
+  }
+  & video[poster] {
+    filter: brightness(50%);
   }
 }
