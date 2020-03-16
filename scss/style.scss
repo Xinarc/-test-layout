@@ -20,6 +20,9 @@ body {
   max-width: $width;
   margin: 0 auto;
 }
+ :hover, :active {
+  transition: .3s;
+}
 .header {
   background-image: url(../img/images/header-slider.jpg);
   background-repeat: no-repeat;
@@ -459,6 +462,14 @@ body {
     flex-direction: column;
     align-items: center;
     z-index: 2;
+    & button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(60%);
+      }
+    }
     & span {
       @include large-text($color-white, Raleway, 30px, 500);
       margin: 44px 0 29px 0;
@@ -476,8 +487,8 @@ body {
   }
   & video {
     outline: none;
-    width: 100%;
-    min-height: 100%;
+    min-width: 100%;
+    max-height: 705px;
   }
   & video[poster] {
     filter: brightness(50%);
@@ -547,5 +558,357 @@ body {
     line-height: 20px;
     text-transform: uppercase;
     margin: 0 0 30px 0;
+  }
+}
+.recent {
+  padding: 80px 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &_title {
+    @include large-text(#555555, Raleway, 30px, 400);
+    margin: 0 0 30px 0;
+  }
+  &_text {
+    @include large-text(#8c8c8c, Montserrat, 16px, 300);
+    line-height: 28px;
+    max-width: 757px;
+    margin: 0 0 40px 0;
+  }
+  &_body {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_itm {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    &-date {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin: 20px 0 0 20px;
+    }
+    &-day {
+      @include large-text($color-white, Montserrat, 24px, 300);
+      line-height: 20px;
+      padding: 9px 10px;
+      background-color: #363636;
+      border-radius: 3px 3px 0 0;
+    }
+    &-month {
+      @include large-text($color-white, Roboto, 12px, 400);
+      line-height: 20px;
+      padding: 7px 13px;
+      background-color: #252525;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  &_itm:nth-child(2) {
+    margin: 0 30px;
+  }
+  &_text-wrp {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f8f8f8;
+    max-width: 370px;
+    text-align: left;
+    position: relative;
+    border-top: none;
+    & a {
+      text-decoration: none;
+      @include large-text(#c7b299, Montserrat, 14px, 300);
+      line-height: 20px;
+      margin: 0 0 33px 30px;
+      &:hover::before {
+        content: "";
+        border: 6px solid transparent;
+        border-left: 6px solid #c7b299;
+        position: absolute;
+        top: 147px;
+        left: 115px;
+      }
+    }
+  }
+  &_itm-title {
+    @include large-text(#555555, Raleway, 20px, 500);
+    margin: 30px 0 19px 29px;
+  }
+  &_itm-text {
+    @include large-text(#8c8c8c, Montserrat, 14px, 300);
+    line-height: 22px;
+    margin: 0 0 27px 29px;
+  }
+  &_itm:hover .recent_photo {
+    filter: brightness(60%);
+  }
+  &_itm:hover .recent_text-wrp {
+    background-color: #362f2d;
+    border: 1px solid #362f2d;
+  }
+  &_itm:hover .recent_itm-title {
+    color: #c7b299;
+  }
+  &_itm:hover .recent_itm-text {
+    color: $color-white;
+  }
+  &_itm:hover .recent_itm-day {
+    color: $color-white;
+    background-color: #c7b299;
+  }
+  &_itm:hover .recent_itm-month {
+    color: $color-white;
+    background-color: #a48d72;
+  }
+  &_itm:hover .recent_pagination {
+    margin: 187px 0 0 134px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  &_itm:hover .recent_circle {
+    display: block;
+    width: 11px;
+    height: 11px;
+    background-color: #d3c1ad;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    margin-right: 10px;
+    opacity: 0.5;
+  }
+  &_itm:hover .recent_circle-active,
+  &_itm:hover .recent_circle:hover {
+    background-color: transparent;
+    border: 2px solid #d3c1ad;
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  &_btn {
+    display: flex;
+    margin: 40px 0 0 0;
+  }
+  &_slider-btn_left {
+    margin: 0 8px 0 0;
+    border: 3px solid #d3c1ad;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-bottom: 3px solid #d3c1ad;
+      border-left: 3px solid #d3c1ad;
+      transform: rotate(45deg);
+    }
+    &:hover:after {
+      border-bottom: 3px solid #d3c1ad;
+      border-left: 3px solid #d3c1ad;
+      opacity: 1;
+    }
+  }
+  &_slider-btn_right {
+    border: 3px solid #d3c1ad;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-top: 3px solid #d3c1ad;
+      border-right: 3px solid #d3c1ad;
+      transform: rotate(45deg);
+    }
+    &:hover:after {
+      border-top: 3px solid #d3c1ad;
+      border-right: 3px solid #d3c1ad;
+      opacity: 1;
+    }
+  }
+}
+.partners {
+  background-image: url(../img/images/partners_bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #191919;
+  padding: 140px 405px;
+  display: flex;
+  justify-content: center;
+  &_img {
+    margin-right: 90px;
+  &:hover {
+    transform: scale(1.2);
+    transition: .3s;
+  }
+  }
+  &_img:last-child {
+    margin: 0 0 0 0;
+  }
+}
+.footer {
+  display: flex;
+  background-color: #191919;
+  padding: 80px 375px;
+  &_about {
+    position: relative;
+    margin-right: 41px;
+  }
+  &_about p {
+    @include large-text(#555555, Montserrat, 14px, 300);
+    line-height: 24px;
+    width: 258px;
+    margin: 29px 0 33px 0;
+    &:hover {
+      color: #c7b299;
+    }
+  }
+  &_about-more {
+    text-decoration: none;
+    @include large-text(#d1d1d1, Montserrat, 14px, 300);
+    line-height: 20px;
+    &:hover::before {
+      content: "";
+      border: 6px solid transparent;
+      border-left: 6px solid #c7b299;
+      position: absolute;
+      top: 288px;
+      left: 90px;
+    }
+  }
+  &_recent {
+    margin: 28px 37px 0 0;
+    width: 262px;
+  }
+  &_recent-title {
+    @include large-text($color-white, Raleway, 24px, 700);
+  }
+  &_recent-text {
+    border-bottom: 1px solid #252525;
+    padding-bottom: 20px;
+  }
+  &_recent-text:last-child {
+    border-bottom: none;
+  }
+  &_recent-span {
+    @include large-text(#555555, Montserrat, 14px, 300);
+    line-height: 20px;
+  }
+  &_recent-p {
+    @include large-text(#363636, Montserrat, 12px, 300);
+    line-height: 20px;
+    margin: 33px 0 10px 1px;
+  }
+  &_recent-text:hover .footer_recent-p,
+  &_our-text:hover .footer_our-p {
+    color: $color-white;
+  }
+  &_recent-text:hover .footer_recent-span,
+  &_our-text:hover .footer_our-span {
+    color: #c7b299;
+  }
+  &_our {
+    margin: 27px 33px 0 0;
+    width: 267px;
+  }
+  &_our-title {
+    @include large-text($color-white, Raleway, 24px, 700);
+  }
+  &_our-text {
+    border-bottom: 1px solid #252525;
+    margin: 30px 0 0 2px;
+  }
+  &_our-text:last-child {
+    border-bottom: none;
+  }
+  &_our-span {
+    @include large-text(#555555, Montserrat, 14px, 300);
+    line-height: 20px;
+    & a {
+      color: #00bff3;
+    }
+    & .footer_our-a {
+      color: #959595;
+    }
+  }
+  &_our-p {
+    @include large-text(#363636, Montserrat, 12px, 300);
+    line-height: 20px;
+    margin: 11px 0 23px 2px;
+  }
+  &_dribbble {
+    margin: 27px 0 0 0;
+    & span {
+      @include large-text($color-white, Raleway, 24px, 700);
+    }
+  }
+  &_dribbble-img {
+    margin: 26px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    & img {
+      margin: 0 10px 10px 0;
+      &:hover {
+        transform: scale(1.2);
+        transition: .3s;
+      }
+    }
+    & img:nth-child(2),
+    & img:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.copyright {
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 375px 52px 375px;
+  &_copy {
+    @include large-text(#555555, Montserrat, 13px, 300);
+    line-height: 20px;
+    & a {
+      text-decoration: none;
+      color: #555555;
+      padding: 0 10px;
+      border-right: 1px solid #555555;
+      &:hover {
+        color: #c7b299;
+      }
+      &:nth-child(4) {
+        border-right: none;
+      }
+    }
+  }
+  &_faq {
+    text-transform: uppercase;
+  }
+  &_designed {
+    @include large-text(#555555, Montserrat, 13px, 300);
+    line-height: 20px;
+    & a {
+      text-decoration: none;
+      color: #555555;
+      padding: 0 10px;
+      &:hover {
+        color: #c7b299;
+      }
+    }
+    & span {
+      padding: 0 10px;
+      &:first-child {
+        border-right: 1px solid #555555;
+      }
+    }
   }
 }
