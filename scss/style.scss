@@ -751,7 +751,6 @@ body {
 }
 .footer {
   display: flex;
-  justify-content: space-between;
   background-color: #191919;
   padding: 80px 375px;
   &_about {
@@ -782,6 +781,7 @@ body {
   }
   &_recent {
     margin: 28px 37px 0 0;
+    width: 262px;
   }
   &_recent-title {
     @include large-text($color-white, Raleway, 24px, 700);
@@ -796,26 +796,30 @@ body {
   &_recent-span {
     @include large-text(#555555, Montserrat, 14px, 300);
     line-height: 20px;
-    max-width: 250px;
   }
   &_recent-p {
     @include large-text(#363636, Montserrat, 12px, 300);
     line-height: 20px;
     margin: 33px 0 10px 1px;
   }
-  &_recent-text:hover .footer_recent-p {
+  &_recent-text:hover .footer_recent-p,
+  &_our-text:hover .footer_our-p {
     color: $color-white;
   }
-  &_recent-text:hover .footer_recent-span {
+  &_recent-text:hover .footer_recent-span,
+  &_our-text:hover .footer_our-span {
     color: #c7b299;
+  }
+  &_our {
+    margin: 27px 33px 0 0;
+    width: 267px;
   }
   &_our-title {
     @include large-text($color-white, Raleway, 24px, 700);
-    margin-bottom: 33px;
   }
   &_our-text {
     border-bottom: 1px solid #252525;
-    margin: 0 0 18px 0;
+    margin: 30px 0 0 2px;
   }
   &_our-text:last-child {
     border-bottom: none;
@@ -823,12 +827,77 @@ body {
   &_our-span {
     @include large-text(#555555, Montserrat, 14px, 300);
     line-height: 20px;
-    max-width: 250px;
-    margin: 0 0 0 2px;
+    & a {
+      color: #00bff3;
+    }
+    & .footer_our-a {
+      color: #959595;
+    }
   }
   &_our-p {
     @include large-text(#363636, Montserrat, 12px, 300);
     line-height: 20px;
-    margin: 11px 0 0 2px;
+    margin: 11px 0 23px 2px;
+  }
+  &_dribbble {
+    margin: 27px 0 0 0;
+    & span {
+      @include large-text($color-white, Raleway, 24px, 700);
+    }
+  }
+  &_dribbble-img {
+    margin: 26px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    & img {
+      margin: 0 10px 10px 0;
+    }
+    & img:nth-child(2),
+    & img:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.copyright {
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 375px 52px 375px;
+  &_copy {
+    @include large-text(#555555, Montserrat, 13px, 300);
+    line-height: 20px;
+    & a {
+      text-decoration: none;
+      color: #555555;
+      padding: 0 10px;
+      border-right: 1px solid #555555;
+      &:hover {
+        color: #c7b299;
+      }
+      &:nth-child(4) {
+        border-right: none;
+      }
+    }
+  }
+  &_faq {
+    text-transform: uppercase;
+  }
+  &_designed {
+    @include large-text(#555555, Montserrat, 13px, 300);
+    line-height: 20px;
+    & a {
+      text-decoration: none;
+      color: #555555;
+      padding: 0 10px;
+      &:hover {
+        color: #c7b299;
+      }
+    }
+    & span {
+      padding: 0 10px;
+      &:first-child {
+        border-right: 1px solid #555555;
+      }
+    }
   }
 }
