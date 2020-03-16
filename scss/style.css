@@ -7,6 +7,11 @@ body {
   margin: 0 auto;
 }
 
+:hover, :active {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .header {
   background-image: url(../img/images/header-slider.jpg);
   background-repeat: no-repeat;
@@ -1069,6 +1074,13 @@ body {
   margin-right: 90px;
 }
 
+.partners_img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .partners_img:last-child {
   margin: 0 0 0 0;
 }
@@ -1234,6 +1246,13 @@ body {
 
 .footer_dribbble-img img {
   margin: 0 10px 10px 0;
+}
+
+.footer_dribbble-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .footer_dribbble-img img:nth-child(2),
