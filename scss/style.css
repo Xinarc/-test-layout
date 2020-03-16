@@ -1051,4 +1051,155 @@ body {
   border-right: 3px solid #d3c1ad;
   opacity: 1;
 }
+
+.partners {
+  background-image: url(../img/images/partners_bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #191919;
+  padding: 140px 405px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partners_img {
+  margin-right: 90px;
+}
+
+.partners_img:last-child {
+  margin: 0 0 0 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #191919;
+  padding: 80px 375px;
+}
+
+.footer_about {
+  position: relative;
+  margin-right: 41px;
+}
+
+.footer_about p {
+  color: #555555;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 258px;
+  margin: 29px 0 33px 0;
+}
+
+.footer_about p:hover {
+  color: #c7b299;
+}
+
+.footer_about-more {
+  text-decoration: none;
+  color: #d1d1d1;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.footer_about-more:hover::before {
+  content: "";
+  border: 6px solid transparent;
+  border-left: 6px solid #c7b299;
+  position: absolute;
+  top: 288px;
+  left: 90px;
+}
+
+.footer_recent {
+  margin: 28px 37px 0 0;
+}
+
+.footer_recent-title {
+  color: #fff;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer_recent-text {
+  border-bottom: 1px solid #252525;
+  padding-bottom: 20px;
+}
+
+.footer_recent-text:last-child {
+  border-bottom: none;
+}
+
+.footer_recent-span {
+  color: #555555;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  max-width: 250px;
+}
+
+.footer_recent-p {
+  color: #363636;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 33px 0 10px 1px;
+}
+
+.footer_recent-text:hover .footer_recent-p {
+  color: #fff;
+}
+
+.footer_recent-text:hover .footer_recent-span {
+  color: #c7b299;
+}
+
+.footer_our-title {
+  color: #fff;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 33px;
+}
+
+.footer_our-text {
+  border-bottom: 1px solid #252525;
+  margin: 0 0 18px 0;
+}
+
+.footer_our-text:last-child {
+  border-bottom: none;
+}
+
+.footer_our-span {
+  color: #555555;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  max-width: 250px;
+  margin: 0 0 0 2px;
+}
+
+.footer_our-p {
+  color: #363636;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 11px 0 0 2px;
+}
 /*# sourceMappingURL=style.css.map */
