@@ -41,6 +41,7 @@ body {
       &:hover,
       &:active {
         color: #c7b299;
+        transition: 0.3s;
       }
     }
   }
@@ -50,6 +51,8 @@ body {
     color: #fff;
     &:hover {
       color: #998675;
+      transform: rotate(360deg);
+      transition: 0.3s;
     }
   }
   &_svg {
@@ -68,6 +71,7 @@ body {
     &:hover,
     &:active {
       fill: #c7b299;
+      transition: 0.3s;
     }
   }
   &_input {
@@ -122,6 +126,7 @@ body {
         background-color: $color-white;
         box-shadow: inset 0 -3px 0 #dad7d5;
         color: #998675;
+        transition: 0.3s;
       }
       &:active {
         background-color: #998675;
@@ -146,6 +151,7 @@ body {
       border-bottom: 3px solid #d3c1ad;
       border-left: 3px solid #d3c1ad;
       opacity: 1;
+      transition: 0.3s;
     }
   }
   &_slider-btn_right {
@@ -164,6 +170,7 @@ body {
       border-top: 3px solid #d3c1ad;
       border-right: 3px solid #d3c1ad;
       opacity: 1;
+      transition: 0.3s;
     }
   }
   &_pagination {
@@ -187,6 +194,7 @@ body {
     border: 2px solid #d3c1ad;
     transform: scale(1.2);
     opacity: 1;
+    transition: 0.3s;
   }
 }
 
@@ -209,14 +217,17 @@ body {
 
     &:hover .services_icon {
       fill: #c7b299;
+      transition: 0.3s;
     }
 
     &:hover .services_title {
       color: #c7b299;
+      transition: 0.3s;
     }
 
     &:hover:after {
       background-color: #c7b299;
+      transition: 0.3s;
     }
   }
   & span {
@@ -255,6 +266,7 @@ body {
     &:hover {
       z-index: 3;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
     }
   }
   &_pic-center {
@@ -262,6 +274,7 @@ body {
     z-index: 2;
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
     }
   }
   &_pic-right {
@@ -337,6 +350,7 @@ body {
       &:first-child {
         background-color: #998675;
         color: $color-white;
+        transition: 0.3s;
       }
       &:active {
         background-color: $color-white;
@@ -409,16 +423,29 @@ body {
     top: 106px;
     right: 145px;
   }
+  &_itm:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0.7;
+    background-color: #111;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  &_itm:hover:after {
+    height: 237px;
+  }
   &_itm:hover .our_btn-search,
   &_itm:hover .our_btn-link {
     display: block;
+    z-index: 2;
   }
   &:hover .our_btn-link:hover,
   &:hover .our_btn-search:hover {
     background-color: $color-white;
-  }
-  &_itm:hover .our_photo {
-    filter: brightness(20%);
   }
   &_itm:hover .our_text-wrp {
     background-color: #362f2d;
@@ -441,6 +468,7 @@ body {
     &:hover {
       color: #998675;
       background-color: $color-white;
+      transition: 0.3s;
     }
     &:active {
       color: $color-white;
@@ -465,6 +493,7 @@ body {
       cursor: pointer;
       &:hover {
         filter: brightness(60%);
+        transition: 0.3s;
       }
     }
     & span {
@@ -639,6 +668,7 @@ body {
   }
   &_itm:hover .recent_photo {
     filter: brightness(60%);
+    transition: 0.3s;
   }
   &_itm:hover .recent_text-wrp {
     background-color: #362f2d;
@@ -680,6 +710,7 @@ body {
     border: 2px solid #d3c1ad;
     transform: scale(1.2);
     opacity: 1;
+    transition: 0.3s;
   }
   &_btn {
     display: flex;
@@ -744,10 +775,10 @@ body {
   justify-content: center;
   &_img {
     margin-right: 90px;
-  &:hover {
-    transform: scale(1.2);
-    transition: .3s;
-  }
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
   }
   &_img:last-child {
     margin: 0 0 0 0;
@@ -857,7 +888,7 @@ body {
       margin: 0 10px 10px 0;
       &:hover {
         transform: scale(1.2);
-        transition: .3s;
+        transition: 0.3s;
       }
     }
     & img:nth-child(2),
